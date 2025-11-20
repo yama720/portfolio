@@ -6,6 +6,9 @@
 .sectionHeading {
   font-size: 2.5em;
   margin-bottom: 40px;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* 2列のグリッド */

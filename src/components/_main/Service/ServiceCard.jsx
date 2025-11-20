@@ -11,7 +11,7 @@ export default function ServiceCard({ title, icons }) {
           <div key={icon.name} className={styles.iconItem}>
             <img
               src={icon.path}
-              alt={icon.name + 'アイコン'}
+              alt={`${icon.name}アイコン`}
               className={styles.iconImage}
             />
           </div>
@@ -20,4 +20,3 @@ export default function ServiceCard({ title, icons }) {
     </div>
   );
 }
-

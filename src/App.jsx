@@ -12,6 +12,7 @@ import Service from './components/_main/Service/Service';
 import Works from './components/_main/Works/Works';
 import Home from './pages/Home';
 import About from './pages/About';
+import Favorite from './components/_main/Favorite/Favorite';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
       {/* ナビゲーション */}
       <nav style={{ display: 'flex', gap: '16px' }}>
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <Link to="/service">Service</Link>
         <Link to="/works">Works</Link>
+        <Link to="/favorite">Favorite</Link>
       </nav>
       <Header />
 
@@ -33,11 +35,12 @@ function App() {
                 <Profile />
                 <Service />
                 <Works />
+                <Favorite />
               </>
             }
           />
 
-          <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
 
           {/* Works 一覧ページ */}
           <Route path="/works" element={<Works />} />
@@ -45,6 +48,8 @@ function App() {
           {/* 詳細ページ */}
           <Route path="/works/poke-api" element={<PokeAPIData />} />
           <Route path="/works/moku-lp" element={<LpData />} />
+
+          <Route path="/favorite" element={<Favorite />} />
         </Routes>
       </MainArea>
 

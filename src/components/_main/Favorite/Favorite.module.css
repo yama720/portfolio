@@ -1,0 +1,35 @@
+.favoriteSection {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.sectionHeading {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sectionSub {
+  font-size: 26px;
+}
+
+.favoriteListGrid {
+  display: grid;
+  /* 3列設定 */
+  grid-template-columns: repeat(2, 1fr);
+  /* アイテム間の間隔 */
+  gap: 20px;
+}
+
+/* --- モバイル対応（メディアクエリ）--- */
+@media (max-width: 768px) {
+  .favoriteListGrid {
+    /* モバイル時は縦一列に変更 */
+    grid-template-columns: 1fr; /* 1列均等幅 */
+    flex-direction: column;
+    align-items: center; /* 縦並びの時にカードを中央に寄せる */
+    gap: 30px; /* 縦の隙間を少し広げる */
+  }
+}
