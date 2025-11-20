@@ -42,5 +42,6 @@ const favoritesData = [
     id: 7,
     imageUrl: bag03,
     altText: '痛バ03',
+    isWide: true,
   },
 ];

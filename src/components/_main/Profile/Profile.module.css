@@ -88,4 +88,8 @@
   .profileInfoArea {
     text-align: center; /* 縦並びなのでテキストも中央寄せに */
   }
+
+  .profileButton {
+    margin: 0 auto;
+  }
 }

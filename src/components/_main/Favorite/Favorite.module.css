@@ -23,6 +23,27 @@
   gap: 20px;
 }
 
+.constructionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  margin: 20px auto 0 20px;
+}
+
+.constructionText {
+  margin: 0;
+  font-size: 24px;
+}
+
+.constructionImage {
+  height: 24px;
+  /* 高さに合わせて幅を自動調整し、比率を維持 */
+  width: auto;
+  object-fit: contain;
+}
+
 /* --- モバイル対応（メディアクエリ）--- */
 @media (max-width: 768px) {
   .favoriteListGrid {
@@ -31,5 +52,9 @@
     flex-direction: column;
     align-items: center; /* 縦並びの時にカードを中央に寄せる */
     gap: 30px; /* 縦の隙間を少し広げる */
+  }
+  .constructionContainer {
+    margin-left: 0; /* 中央寄せのレイアウトに合わせる */
+    justify-content: center; /* コンテナ内の要素を中央に寄せる */
   }
 }

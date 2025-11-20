@@ -17,6 +17,18 @@
   display: flex;
 }
 
+/* 横長アイテム全体の扱い */
+.wideItem {
+  grid-column: span 2; /* 2列をまたぐ（横長表示） */
+}
+
+/* 横長の画像サイズ調整 */
+.wideImage {
+  width: 100%;
+  height: auto; /* 縦を自動調整して横長を維持 */
+  object-fit: contain;
+}
+
 /* --- モバイル対応（メディアクエリ）--- */
 @media (max-width: 768px) {
   .favoriteImage {

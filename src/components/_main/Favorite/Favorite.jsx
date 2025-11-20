@@ -8,6 +8,7 @@ import ribbon from './../../../assets/image/ribbon.png';
 import bag01 from './../../../assets/image/bag03.png';
 import bag02 from './../../../assets/image/bag02.jpg';
 import bag03 from './../../../assets/image/bag01.png';
+import construction from './../../../assets/image/construction.png';
 
 // 仮にここでデータを定義
 const favoritesData = [
@@ -62,7 +63,19 @@ const Favorite = () => {
       </div>
 
       <h3 className={styles.sectionSub}>イラスト</h3>
-      <p>工事中</p>
+      <div className={styles.constructionContainer}>
+        <img
+          src={construction}
+          alt="工事中イラスト"
+          className={styles.constructionImage}
+        />
+        <p className={styles.constructionText}>工事中</p>
+        <img
+          src={construction}
+          alt="工事中イラスト"
+          className={styles.constructionImage}
+        />
+      </div>
     </section>
   );
 };
