@@ -5,6 +5,8 @@ import mobileMockup from './../../../assets/image/LP-sp.png';
 import mokuLP from './../../../assets/image/LP02.png';
 
 export default function LpData() {
+  const Link = import.meta.env.BASE_URL;
+
   return (
     <div className={styles.detailPage}>
       <header className={styles.header}>
@@ -40,13 +42,25 @@ export default function LpData() {
       <section className={styles.SectionItem}>
         <h2 className={styles.subHeading}>制作ツール</h2>
         <div className={styles.IconsItem}>
-          <img src="/figma.png" alt="Figma" className={styles.IconItem} />
-          <img src="/vscode.png" alt="VSCode" className={styles.IconItem} />
-          <img src="/html.png" alt="HTML" className={styles.IconItem} />
-          <img src="/sass.png" alt="Sass" className={styles.IconItem} />
-          <img src="/js.png" alt="JavaScript" className={styles.IconItem} />
           <img
-            src="/github-mark.svg"
+            src={`${Link}figma.png`}
+            alt="Figma"
+            className={styles.IconItem}
+          />
+          <img
+            src={`${Link}vscode.png`}
+            alt="VSCode"
+            className={styles.IconItem}
+          />
+          <img src={`${Link}html.png`} alt="HTML" className={styles.IconItem} />
+          <img src={`${Link}sass.png`} alt="Sass" className={styles.IconItem} />
+          <img
+            src={`${Link}js.png`}
+            alt="JavaScript"
+            className={styles.IconItem}
+          />
+          <img
+            src={`${Link}github-mark.svg`}
             alt="GitHub"
             className={styles.IconItem}
           />
