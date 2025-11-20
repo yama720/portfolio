@@ -40,11 +40,11 @@ export default function LpData() {
       <section className={styles.SectionItem}>
         <h2 className={styles.subHeading}>制作ツール</h2>
         <div className={styles.IconsItem}>
-          <img src="/Figma.png" alt="Figma" className={styles.IconItem} />
-          <img src="/VScode.png" alt="VSCode" className={styles.IconItem} />
-          <img src="/HTML.png" alt="HTML" className={styles.IconItem} />
-          <img src="/Sass.png" alt="Sass" className={styles.IconItem} />
-          <img src="/JS.png" alt="JavaScript" className={styles.IconItem} />
+          <img src="/figma.png" alt="Figma" className={styles.IconItem} />
+          <img src="/vscode.png" alt="VSCode" className={styles.IconItem} />
+          <img src="/html.png" alt="HTML" className={styles.IconItem} />
+          <img src="/sass.png" alt="Sass" className={styles.IconItem} />
+          <img src="/js.png" alt="JavaScript" className={styles.IconItem} />
           <img
             src="/github-mark.svg"
             alt="GitHub"

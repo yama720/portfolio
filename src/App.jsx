@@ -1,4 +1,5 @@
 import './App.css';
+import styles from './App.module.css';
 
 import Footer from './components/_footer/Footer';
 import Header from './components/_header/Header';
@@ -13,12 +14,13 @@ import Works from './components/_main/Works/Works';
 import Home from './pages/Home';
 import About from './pages/About';
 import Favorite from './components/_main/Favorite/Favorite';
+import ScrollToTop from './components/_commons/ScrollToTop';
 
 function App() {
   return (
     <div>
       {/* ナビゲーション */}
-      <nav style={{ display: 'flex', gap: '16px' }}>
+      <nav className={styles.mainNav}>
         <Link to="/">Home</Link>
         <Link to="/service">Service</Link>
         <Link to="/works">Works</Link>
@@ -27,6 +29,7 @@ function App() {
       <Header />
 
       <MainArea>
+        <ScrollToTop />
         <Routes>
           <Route
             path="/"
