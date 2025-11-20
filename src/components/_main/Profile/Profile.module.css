@@ -1,0 +1,91 @@
+.profileContainer {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.profileHeading {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.profileContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* 画像 */
+.profilePhotoArea {
+  flex-shrink: 0; /* 縮まないように */
+  margin-right: 50px; /* テキストとの間の隙間 */
+  /* 画像の枠サイズ調整はここで行う */
+}
+
+.profilePhoto {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.profileInfoArea {
+  text-align: left;
+  max-width: 400px;
+}
+
+.profileName {
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+.profileDescription {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ボタン */
+.profileButton {
+  display: flex;
+  align-items: center;
+  background: #f4fafd;
+  border: 1px solid #ccc;
+  padding: 8px 50px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 16px;
+}
+
+.plusIcon {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.buttonImage {
+  width: 30px;
+  height: 30px;
+}
+
+/* --- モバイル対応（メディアクエリ）--- */
+@media (max-width: 768px) {
+  .profileContent {
+    flex-direction: column; /* 画面が狭くなったら縦並びにする */
+    padding: 20px;
+  }
+
+  .profilePhotoArea {
+    margin-right: 0;
+    margin-bottom: 20px; /* 縦並びになった時の下側のマージン */
+  }
+
+  .profileInfoArea {
+    text-align: center; /* 縦並びなのでテキストも中央寄せに */
+  }
+}

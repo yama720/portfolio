@@ -1,0 +1,37 @@
+.cardLink {
+  text-decoration: none;
+  color: inherit; /* 文字色を親から継承 */
+  display: block; /* リンク全体をブロック要素に */
+  transition: transform 0.2s;
+}
+
+.cardLink:hover {
+  transform: translateY(-5px); /* ホバーで少し持ち上がるアニメーション */
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: left;
+}
+
+.imageWrapper {
+  /* 画像の周囲の余白や、画像がはみ出すのを防ぐための設定 */
+  padding: 20px;
+  background-color: #f7f7f7; /* 背景色（カンプのような薄い色） */
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cardTitle {
+  padding: 15px 20px;
+  font-size: 1.3em;
+  margin: 0;
+  text-align: center;
+}

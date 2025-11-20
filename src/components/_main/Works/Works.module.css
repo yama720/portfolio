@@ -1,0 +1,28 @@
+.worksSection {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.sectionHeading {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+/* 2列のグリッド */
+.cardContainer {
+  display: grid;
+  /* 1fr で利用可能なスペースを2列で作成 */
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* --- モバイル対応 --- */
+@media (max-width: 768px) {
+  /* 画面が狭くなったら1列にする */
+  .cardContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

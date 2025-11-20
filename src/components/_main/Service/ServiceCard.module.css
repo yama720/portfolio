@@ -1,0 +1,41 @@
+.card {
+  flex-basis: 300px; /* カードの基準幅 */
+  flex-grow: 1; /* スペースがあれば広がる */
+  flex-shrink: 1; /* 狭くなったら縮む */
+
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee; /* タイトル下の区切り線 */
+  padding-bottom: 15px;
+}
+
+/* アイコンをグリッド状に配置 */
+.iconGrid {
+  display: grid;
+  /* 1行に3列配置 */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding-top: 10px;
+}
+
+.iconImage {
+  width: 50px;
+  height: 50px;
+}
+
+/* モバイル時 */
+@media (max-width: 768px) {
+  .card {
+    /* 縦並びになった時に横幅いっぱいに広げる */
+    width: 90%;
+    max-width: 400px;
+  }
+}
