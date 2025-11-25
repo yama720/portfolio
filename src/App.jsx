@@ -19,12 +19,14 @@ import useSplashScreenControl from './components/SplashScreen/useSplashScreenCon
 
 function App() {
   //スプラッシュ制御を呼び出す
-  const { showSplash, closeSplash } = useSplashScreenControl();
+  const { showSplash, splashClass, closeSplash } = useSplashScreenControl();
 
   return (
     <>
       {/* スプラッシュ画面（showSplash が true の間だけ表示） */}
-      {showSplash && <SplashScreen onClose={closeSplash} />}
+      {showSplash && (
+        <SplashScreen onClose={closeSplash} splashClass={splashClass} />
+      )}
 
       {/* showSplash が false のときだけ、通常画面を表示 */}
       {!showSplash && (

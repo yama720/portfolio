@@ -7,6 +7,9 @@ const useSplashScreenControl = () => {
   // スプラッシュ画面の表示/非表示を制御 (初期値はtrue)
   const [showSplash, setShowSplash] = useState(true);
 
+  // アニメーション用のクラス
+  const [splashClass, setSplashClass] = useState('');
+
   const closeSplash = () => {
     setShowSplash(false);
   };
@@ -15,30 +18,24 @@ const useSplashScreenControl = () => {
     // 既に閉じていたらイベントリスナーは不要
     if (!showSplash) return;
 
-    // クリック、スクロール、キーボード操作で画面を閉じるためのイベントハンドラ
-    const handleAction = () => {
-      // 画面を閉じ、イベントリスナーを解除する
-      closeSplash();
-      document.removeEventListener('click', handleAction);
-      window.removeEventListener('scroll', handleAction);
-      window.removeEventListener('keydown', handleAction);
+    // 上にスライドするため用
+    const handleScroll = () => {
+      setSplashClass('slideUpByScroll');
     };
 
     // イベントリスナーの登録
-    document.addEventListener('click', handleAction);
-    window.addEventListener('scroll', handleAction);
-    window.addEventListener('keydown', handleAction);
+    document.addEventListener('click', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     // クリーンアップ関数: コンポーネントがアンマウントされる際にリスナーを削除
     return () => {
-      document.removeEventListener('click', handleAction);
-      window.removeEventListener('scroll', handleAction);
-      window.removeEventListener('keydown', handleAction);
+      document.removeEventListener('click', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [showSplash]);
 
   // スプラッシュ画面の状態と操作関数を返す
-  return { showSplash, closeSplash };
+  return { showSplash, splashClass, closeSplash, setSplashClass };
 };
 
 export default useSplashScreenControl;

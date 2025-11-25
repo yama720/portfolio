@@ -3,21 +3,37 @@
 
   /* 画面全体を覆い、固定する */
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
+
+  background-color: #f7f7f7;
+  color: #4d4d4d;
+  z-index: 9999; /* 要素の上に表示 */
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background-color: #f7f7f7;
-  color: #4d4d4d;
-  z-index: 9999; /* 要素の上に表示 */
   cursor: pointer;
-  transition: opacity 1s ease-out; /* フェードアウト用 */
+  transition: opacity 0.3s; /* フェードアウト用 */
+}
+
+/* 上方向にスライド */
+.slideUpByScroll {
+  animation: slideUp 0.8s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
 .title {
@@ -38,7 +54,7 @@
   }
 
   .title {
-    font-size: 2.5em;
+    font-size: 2em;
     letter-spacing: 0.2em;
   }
 
