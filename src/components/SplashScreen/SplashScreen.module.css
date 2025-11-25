@@ -1,0 +1,49 @@
+.splashContainer {
+  font-family: 'Mochiy Pop One', sans-serif;
+
+  /* 画面全体を覆い、固定する */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f7f7f7;
+  color: #4d4d4d;
+  z-index: 9999; /* 要素の上に表示 */
+  cursor: pointer;
+  transition: opacity 1s ease-out; /* フェードアウト用 */
+}
+
+.title {
+  font-size: 5em;
+  letter-spacing: 0.2em;
+}
+
+.action {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+/* --- モバイル対応（メディアクエリ）--- */
+@media (max-width: 768px) {
+  .splashContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+  }
+
+  .action {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+}

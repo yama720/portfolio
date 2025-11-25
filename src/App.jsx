@@ -1,63 +1,62 @@
-import './App.css';
 import styles from './App.module.css';
 
 import Footer from './components/_footer/Footer';
 import Header from './components/_header/Header';
+
 import MainArea from './components/_main/MainArea/MainArea';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PokeAPIData from './components/_main/Works/PokeAPIData';
 import LpData from './components/_main/Works/LpData';
 import Profile from './components/_main/Profile/Profile';
 import Service from './components/_main/Service/Service';
-
 import Works from './components/_main/Works/Works';
-import Home from './pages/Home';
-import About from './pages/About';
 import Favorite from './components/_main/Favorite/Favorite';
 import ScrollToTop from './components/_commons/ScrollToTop';
 
+//スプラッシュ画面関連
+import SplashScreen from './components/SplashScreen/SplashScreen';
+import useSplashScreenControl from './components/SplashScreen/useSplashScreenControl';
+
 function App() {
+  //スプラッシュ制御を呼び出す
+  const { showSplash, closeSplash } = useSplashScreenControl();
+
   return (
-    <div>
-      {/* ナビゲーション */}
-      <nav className={styles.mainNav}>
-        <Link to="/">Home</Link>
-        <Link to="/service">Service</Link>
-        <Link to="/works">Works</Link>
-        <Link to="/favorite">Favorite</Link>
-      </nav>
-      <Header />
+    <>
+      {/* スプラッシュ画面（showSplash が true の間だけ表示） */}
+      {showSplash && <SplashScreen onClose={closeSplash} />}
 
-      <MainArea>
-        <ScrollToTop />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Profile />
-                <Service />
-                <Works />
-                <Favorite />
-              </>
-            }
-          />
+      {/* showSplash が false のときだけ、通常画面を表示 */}
+      {!showSplash && (
+        <div>
+          <Header />
 
-          <Route path="/service" element={<Service />} />
+          <MainArea>
+            <ScrollToTop />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Profile />
+                    <Service />
+                    <Works />
+                    <Favorite />
+                  </>
+                }
+              />
+              <Route path="/service" element={<Service />} />
+              <Route path="/works" element={<Works />} />
+              <Route path="/works/poke-api" element={<PokeAPIData />} />
+              <Route path="/works/moku-lp" element={<LpData />} />
+              <Route path="/favorite" element={<Favorite />} />
+            </Routes>
+          </MainArea>
 
-          {/* Works 一覧ページ */}
-          <Route path="/works" element={<Works />} />
-
-          {/* 詳細ページ */}
-          <Route path="/works/poke-api" element={<PokeAPIData />} />
-          <Route path="/works/moku-lp" element={<LpData />} />
-
-          <Route path="/favorite" element={<Favorite />} />
-        </Routes>
-      </MainArea>
-
-      <Footer />
-    </div>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 
