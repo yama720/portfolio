@@ -18,7 +18,7 @@ const useSplashScreenControl = () => {
     // 既に閉じていたらイベントリスナーは不要
     if (!showSplash) return;
 
-    // 上にスライドするため用
+    // 上にスライドする用
     const handleScroll = () => {
       setSplashClass('slideUpByScroll');
     };

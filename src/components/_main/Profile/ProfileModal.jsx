@@ -29,7 +29,7 @@ export default function Modal({ isOpen, onClose, content }) {
           <p>美味しいもの巡り/ものづくり</p>
         </div>
 
-        <p>{content}</p>
+        <p className={styles.modalProfileText}>{content}</p>
       </div>
     </div>
   );

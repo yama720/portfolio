@@ -28,11 +28,21 @@
 
 .modalProfile {
   h4 {
-    margin-block-end: 0;
+    margin-block-start: 1rem;
   }
   p {
     margin-block-start: 0;
   }
+}
+
+.modalProfile h3,
+.modalProfile h4,
+.modalProfile p {
+  text-align: left;
+}
+
+.modalProfileText {
+  padding-block-start: 2rem;
 }
 
 /* 閉じボタン*/

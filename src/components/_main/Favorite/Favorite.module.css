@@ -13,6 +13,8 @@
 
 .sectionSub {
   font-size: 26px;
+  padding-block-end: 1rem;
+  margin-block-start: 2rem;
 }
 
 .favoriteListGrid {
@@ -20,7 +22,7 @@
   /* 3列設定 */
   grid-template-columns: repeat(2, 1fr);
   /* アイテム間の間隔 */
-  gap: 20px;
+  gap: 50px;
 
   max-width: 900px;
   margin: 0 auto;
