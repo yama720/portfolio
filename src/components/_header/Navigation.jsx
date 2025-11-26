@@ -7,6 +7,7 @@ import Service from '../_main/Service/Service';
 import Works from '../_main/Works/Works';
 import Favorite from '../_main/Favorite/Favorite';
 
+import HolidayDiaryData from '../_main/Works/HolidayDiaryData';
 import LpData from '../_main/Works/LpData';
 import PokeAPIData from '../_main/Works/PokeAPIData';
 
@@ -32,6 +33,7 @@ export default function Navigation() {
         <Route path="/works" element={<Works />} />
         <Route path="/works/poke-api" element={<PokeAPIData />} />
         <Route path="/works/moku-lp" element={<LpData />} />
+        <Route path="/works/holiday-diary" element={<HolidayDiaryData />} />
         <Route path="/favorite" element={<Favorite />} />
 
         <Route path="*" element={<NotFound />} />

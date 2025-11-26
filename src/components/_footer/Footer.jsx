@@ -22,7 +22,7 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <p>&copy; 2025 Yamada Maho</p>
+        <p className={styles.copyright}>&copy; 2025 Yamada Maho</p>
       </footer>
     </>
   );

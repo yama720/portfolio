@@ -1,5 +1,6 @@
 import pokeImg from '../../../assets/image/PokeAPI01.png';
 import LpImg from '../../../assets/image/LP01.png';
+import holidayImg from '../../../assets/image/holiday01.png';
 
 export const worksData = [
   {
@@ -14,5 +15,11 @@ export const worksData = [
     title: 'moku.のLP',
     previewImage: LpImg,
     path: '/works/moku-lp',
+  },
+  {
+    id: 'holiday-diary',
+    title: 'お盆休みの日記',
+    previewImage: holidayImg,
+    path: '/works/holiday-diary',
   },
 ];

@@ -55,9 +55,10 @@
   padding-inline-start: 0;
 }
 
-p {
+.copyright {
   text-align: center;
-  color: #4d4d4d;
+  color: #a6a5a5ff;
+  padding-block: 1rem;
 }
 
 /*  モバイル対応 (レスポンシブ) */

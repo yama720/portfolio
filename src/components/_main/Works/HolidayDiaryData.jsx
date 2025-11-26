@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './PokeAPIData.module.css';
-import desktopMockup from './../../../assets/image/PokeAPI-pc.png';
-import mobileMockup from './../../../assets/image/PokeAPI-sp.png';
-import PokeAPI from './../../../assets/image/PokeAPI02.png';
+import desktopMockup from './../../../assets/image/holiday-pc.png';
+import mobileMockup from './../../../assets/image/holiday-sp.png';
+import HolidayDiary from './../../../assets/image/holiday02.png';
 
-export default function PokeAPIData() {
+export default function HolidayDiaryData() {
   const Link = import.meta.env.BASE_URL;
 
   const navigate = useNavigate();
@@ -20,9 +20,9 @@ export default function PokeAPIData() {
     <>
       <div className={styles.detailPage}>
         <header className={styles.header}>
-          <h1 className={styles.title}>PokeAPI</h1>
+          <h1 className={styles.title}>お盆休み日記</h1>
           <p className={styles.overview}>
-            PokeAPIを利用して、今日のニュースとラッキーカラーにまつわるポケモンを表示する作品。
+            最初の制作課題。お盆期間の出来事を書き留めた日記。
           </p>
         </header>
 
@@ -88,32 +88,28 @@ export default function PokeAPIData() {
         {/* 詳細な説明テキスト */}
         <section className={styles.descriptionSection}>
           <h2 className={styles.subHeading}>制作期間</h2>
-          <p className={styles.detailText}>1週間</p>
+          <p className={styles.detailText}>2日</p>
           <h2 className={styles.subHeading}>目的</h2>
           <p className={styles.detailText}>
-            朝のニュース番組のように見出しだけでもパッと見ただけで、今日のニュースがわかるサイトが欲しくて制作しました。
-            <br />
-            各サイトから引っ張ってきているので、記事の本文も含めて内容に偏りが出ないようになっています。
-            <br />
-            また移動中等の朝に見ることを想定しているため、遊び心として、今日のラッキーカラーも追加しました。
-            <br />
-            ランダムで出て来た色、ポケモンの何かしらをその日持っていたら少し気分が上がる仕様に仕上げれました。
+            最初の制作課題で、お盆期間の出来事を書き留めた日記を制作しました。
             <br />
           </p>
           <h2 className={styles.subHeading}>デザインプロセス</h2>
           <p className={styles.detailText}>
-            上部には、NEWSDATA.IOを使った今日の最新ニュースと推しポケモンをランダムに表示。
+            トップページの各記事は、画像と一部本文のみ表示するようにしており、
             <br />
-            下部には、ラッキーカラーを表示させるボタンを配置し、クリックするとランダムで「色名」が表示される。
+            もっと読みたいときに、続きはこちらボタンを押すとページが遷移するように設定しています。
             <br />
-            その後、ランダムで排出されたその色に関連するポケモンが5匹表示される。
+            また各記事は、カテゴリー別にソートをかけることも可能にしています。
+            <br />
+            スクロールした際にメニューが右側をついてくる仕様は、使いやすさ重視で実装しました。
             <br />
           </p>
 
           {/* ライブデモやGitHubへのリンク */}
           <div className={styles.linkGroup}>
             <a
-              href="https://yama720.github.io/PokeAPI/"
+              href="https://yama720.github.io/obon_holiday/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.actionButton}
@@ -121,7 +117,7 @@ export default function PokeAPIData() {
               サイトを見る
             </a>
             <a
-              href="https://github.com/yama720/PokeAPI"
+              href="https://github.com/yama720/obon_holiday"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.actionButton}
@@ -133,7 +129,7 @@ export default function PokeAPIData() {
 
         <section className={styles.screenshotSection}>
           <img
-            src={PokeAPI}
+            src={HolidayDiary}
             alt="サイト画像"
             className={styles.screenshotImage}
           />
