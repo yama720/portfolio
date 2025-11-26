@@ -148,7 +148,7 @@ export default function LpData() {
             <br />
             <span className={styles.left}>カフェ利用の目的：</span>
             <span className={styles.right}>
-              【 平日】午前中に仕事の続きをする（電源、Wi-Fi必須）。
+              【平日】午前中に仕事の続きをする（電源、Wi-Fi必須）。
               <br />
               【休日】：夫とブランチを楽しむ、または一人で読書や考え事をする。
             </span>

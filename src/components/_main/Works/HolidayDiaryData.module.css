@@ -51,17 +51,6 @@
   height: auto;
 }
 
-@media (max-width: 768px) {
-  .deviceMockups {
-    flex-direction: column; /* スマホでは縦並びに */
-    align-items: center;
-  }
-  .desktopWrapper,
-  .mobileWrapper {
-    max-width: 80%; /* 幅を広げる */
-  }
-}
-
 /* アイコンリスト */
 .SectionItem {
   text-align: left;
@@ -158,4 +147,16 @@
 
 .ButtonFixed:hover {
   background-color: #0056b3;
+}
+
+/* --- モバイル対応（メディアクエリ）--- */
+@media (max-width: 768px) {
+  .deviceMockups {
+    flex-direction: column; /* スマホでは縦並びに */
+    align-items: center;
+  }
+  .desktopWrapper,
+  .mobileWrapper {
+    max-width: 80%; /* 幅を広げる */
+  }
 }
