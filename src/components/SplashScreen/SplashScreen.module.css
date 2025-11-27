@@ -37,8 +37,42 @@
 }
 
 .title {
+  display: flex;
   font-size: 5em;
   letter-spacing: 0.2em;
+}
+
+.animationChar {
+  /* 文字の間隔 */
+  margin: 0 0.1rem;
+
+  /* アニメーション設定 */
+  display: inline-block;
+  transition: transform 0.1s ease-out; /* ホバー開始時に素早く反応させる */
+}
+
+.animationChar:hover {
+  /* ポヨンと上に跳ねるアニメーション */
+  animation: bounce 0.5s ease-out forwards;
+}
+
+/* ポヨンポヨンと跳ねるキーフレームアニメーション */
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    /* 上に大きく跳ねる */
+    transform: translateY(-15px) scale(1.1);
+  }
+  60% {
+    /* 少し下に落ちる（重力感） */
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    /* 元の位置に戻る */
+    transform: translateY(0) scale(1);
+  }
 }
 
 .action {
@@ -55,7 +89,11 @@
 
   .title {
     font-size: 2em;
-    letter-spacing: 0.2em;
+    /* letter-spacing: 0.2em; */
+  }
+
+  .animationChar {
+    margin: 0 0.05rem;
   }
 
   .action {

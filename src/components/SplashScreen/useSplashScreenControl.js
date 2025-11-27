@@ -18,18 +18,35 @@ const useSplashScreenControl = () => {
     // 既に閉じていたらイベントリスナーは不要
     if (!showSplash) return;
 
-    // 上にスライドする用
-    const handleScroll = () => {
+    // スプラッシュ画面を閉じるアニメーションを開始する共通関数
+    const ClosingAnimation = () => {
       setSplashClass('slideUpByScroll');
     };
 
+    const handleClick = () => {
+      ClosingAnimation();
+    };
+
+    const handleScroll = () => {
+      // バウンスアニメーションはscrollYの値を変更しないため、誤発動を防止できる
+      if (window.scrollY > 0) {
+        ClosingAnimation();
+      }
+      // スクロール位置が0のままイベントが発火した場合（誤検出）は、何もしない
+    };
+
+    // // 上にスライドする用
+    // const handleScroll = () => {
+    //   setSplashClass('slideUpByScroll');
+    // };
+
     // イベントリスナーの登録
-    document.addEventListener('click', handleScroll);
+    document.addEventListener('click', handleClick);
     window.addEventListener('scroll', handleScroll);
 
     // クリーンアップ関数: コンポーネントがアンマウントされる際にリスナーを削除
     return () => {
-      document.removeEventListener('click', handleScroll);
+      document.removeEventListener('click', handleClick);
       window.removeEventListener('scroll', handleScroll);
     };
   }, [showSplash]);

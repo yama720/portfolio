@@ -136,7 +136,7 @@
 
 .ButtonFixed {
   padding: 12px 25px;
-  background-color: #007bff;
+  background-color: #d4d1d1;
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -146,7 +146,7 @@
 }
 
 .ButtonFixed:hover {
-  background-color: #0056b3;
+  background-color: #9a9898;
 }
 
 /* --- モバイル対応（メディアクエリ）--- */

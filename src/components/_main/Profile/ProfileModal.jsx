@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ProfileModal.module.css';
+import closeIconImg from './../../../assets/image/close.png';
 
 // onClose: 親コンポーネントから渡される「閉じる」関数
 export default function Modal({ isOpen, onClose, content }) {
@@ -15,7 +16,7 @@ export default function Modal({ isOpen, onClose, content }) {
       */}
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeButton} onClick={onClose}>
-          &times;
+          <img src={closeIconImg} alt="閉じる" className={styles.closeIcon} />
         </button>
 
         {/* モーダル内の詳細を記述 */}
