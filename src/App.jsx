@@ -7,6 +7,7 @@ import Header from '@components/_header/Header';
 //スプラッシュ画面関連
 import SplashScreen from '@components/SplashScreen/SplashScreen';
 import useSplashScreenControl from '@components/SplashScreen/useSplashScreenControl';
+import BackToTopButton from '@components/_commons/BackToTopButton';
 
 function App() {
   //スプラッシュ制御を呼び出す
@@ -25,6 +26,8 @@ function App() {
         <Navigation />
 
         <Footer />
+
+        <BackToTopButton />
       </div>
     </>
   );

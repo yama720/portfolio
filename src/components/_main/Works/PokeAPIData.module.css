@@ -127,8 +127,9 @@
 /* --- 固定ボタンの設定 --- */
 .fixedButtonContainer {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 30px;
+  left: 50%; /* 左端を中央に */
+  transform: translateX(-50%); /* 要素の幅の半分だけ戻す */
 
   /* ボタンを常に最前面に */
   z-index: 1000;
@@ -136,7 +137,7 @@
 
 .ButtonFixed {
   padding: 12px 25px;
-  background-color: #d4d1d1;
+  background-color: #adadad;
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -146,7 +147,7 @@
 }
 
 .ButtonFixed:hover {
-  background-color: #9a9898;
+  background-color: #555;
 }
 
 /* --- モバイル対応（メディアクエリ）--- */
@@ -155,8 +156,20 @@
     flex-direction: column; /* スマホでは縦並びに */
     align-items: center;
   }
-  .desktopWrapper,
-  .mobileWrapper {
+  .desktopWrapper {
     max-width: 80%; /* 幅を広げる */
+  }
+
+  .mobileWrapper {
+    max-width: 30%;
+  }
+
+  .IconItem {
+    width: 35px;
+    height: 35px;
+  }
+
+  .IconsItem {
+    gap: 15px;
   }
 }
