@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './LpData.module.css';
-import desktopMockup from './../../../assets/image/LP-pc.png';
-import mobileMockup from './../../../assets/image/LP-sp.png';
-import mokuLP from './../../../assets/image/LP02.png';
+import desktopMockup from '@assets/image/LP-pc.png';
+import mobileMockup from '@assets/image/LP-sp.png';
+import mokuLP from '@assets/image/LP02.png';
 
 export default function LpData() {
   const Link = import.meta.env.BASE_URL;

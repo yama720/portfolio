@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Profile.module.css';
-import profileImage from './../../../assets/image/profile.jpg';
-import buttonImage from './../../../assets/image/arrow.png';
+import profileImage from '@assets/image/profile.jpg';
+import buttonImage from '@assets/image/arrow.png';
 import ProfileModal from './ProfileModal';
 
 export default function Profile() {

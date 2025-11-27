@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './PokeAPIData.module.css';
-import desktopMockup from './../../../assets/image/holiday-pc.png';
-import mobileMockup from './../../../assets/image/holiday-sp.png';
-import HolidayDiary from './../../../assets/image/holiday02.png';
+import desktopMockup from '@assets/image/holiday-pc.png';
+import mobileMockup from '@assets/image/holiday-sp.png';
+import HolidayDiary from '@assets/image/holiday02.png';
 
 export default function HolidayDiaryData() {
   const Link = import.meta.env.BASE_URL;

@@ -11,7 +11,7 @@ import HolidayDiaryData from '../_main/Works/HolidayDiaryData';
 import LpData from '../_main/Works/LpData';
 import PokeAPIData from '../_main/Works/PokeAPIData';
 
-import NotFound from '../../pages/NotFound';
+import NotFound from '@pages/NotFound';
 
 export default function Navigation() {
   return (

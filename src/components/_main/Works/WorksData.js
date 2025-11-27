@@ -1,6 +1,6 @@
-import pokeImg from '../../../assets/image/PokeAPI01.png';
-import LpImg from '../../../assets/image/LP01.png';
-import holidayImg from '../../../assets/image/holiday01.png';
+import pokeImg from '@assets/image/PokeAPI01.png';
+import LpImg from '@assets/image/LP01.png';
+import holidayImg from '@assets/image/holiday01.png';
 
 export const worksData = [
   {

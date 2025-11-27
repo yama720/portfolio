@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ProfileModal.module.css';
-import closeIconImg from './../../../assets/image/close.png';
+import closeIconImg from '@assets/image/close.png';
 
 // onClose: 親コンポーネントから渡される「閉じる」関数
 export default function Modal({ isOpen, onClose, content }) {

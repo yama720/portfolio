@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './PokeAPIData.module.css';
-import desktopMockup from './../../../assets/image/PokeAPI-pc.png';
-import mobileMockup from './../../../assets/image/PokeAPI-sp.png';
-import PokeAPI from './../../../assets/image/PokeAPI02.png';
+import desktopMockup from '@assets/image/PokeAPI-pc.png';
+import mobileMockup from '@assets/image/PokeAPI-sp.png';
+import PokeAPI from '@assets/image/PokeAPI02.png';
 
 export default function PokeAPIData() {
   const Link = import.meta.env.BASE_URL;

@@ -1,10 +1,10 @@
-import iron from './../../../assets/image/beads.png';
-import clothes from './../../../assets/image/clothes.jpg';
-import whip from './../../../assets/image/whip.jpg';
-import ribbon from './../../../assets/image/ribbon.png';
-import bag01 from './../../../assets/image/bag03.png';
-import bag02 from './../../../assets/image/bag02.jpg';
-import bag03 from './../../../assets/image/bag01.png';
+import iron from '@assets/image/beads.png';
+import clothes from '@assets/image/clothes.jpg';
+import whip from '@assets/image/whip.jpg';
+import ribbon from '@assets/image/ribbon.png';
+import bag01 from '@assets/image/bag03.png';
+import bag02 from '@assets/image/bag02.jpg';
+import bag03 from '@assets/image/bag01.png';
 
 // サンプルのデータ構造
 const favoritesData = [
