@@ -80,6 +80,25 @@
   font-size: 1.2em;
 }
 
+.ScrollImg {
+  width: auto;
+  height: auto;
+  padding-block-start: 2rem;
+
+  animation: scrollBounce 1.5s infinite ease-in-out;
+}
+
+/* 矢印を上下に動かすキーフレームアニメーション */
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
 /* --- モバイル対応（メディアクエリ）--- */
 @media (max-width: 768px) {
   .splashContainer {
@@ -99,5 +118,12 @@
   .action {
     margin-top: 10px;
     font-size: 1em;
+  }
+
+  .ScrollImg {
+    width: 40px;
+    height: 80px;
+
+    padding-block-start: 1rem;
   }
 }

@@ -7,7 +7,7 @@ import bag02 from '@assets/image/bag02.jpg';
 import bag03 from '@assets/image/bag01.png';
 
 // サンプルのデータ構造
-const favoritesData = [
+export const favoritesData = [
   {
     id: 1,
     imageUrl: iron,

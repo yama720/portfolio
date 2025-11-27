@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SplashScreen.module.css';
+import ScrollImage from '@assets/image/Scroll.png';
 
 // 閉じる関数をpropsで受け取る
 const SplashScreen = ({ onClose, splashClass }) => {
@@ -12,7 +13,7 @@ const SplashScreen = ({ onClose, splashClass }) => {
       // ホバー時のクラス。
       className={styles.animationChar}
     >
-      {char === ' ' ? '\u00A0' : char} {/* スペースも表示できるように処理 */}
+      {char === ' ' ? '\u00A0' : char}
     </span>
   ));
 
@@ -29,7 +30,13 @@ const SplashScreen = ({ onClose, splashClass }) => {
       onAnimationEnd={handleAnimationEnd} // アニメ終了後に閉じる
     >
       <h1 className={styles.title}>{animationTitle}</h1>
-      <p className={styles.action}>Click or Scroll </p>
+      <div className={styles.action}>
+        <img
+          src={ScrollImage}
+          alt="スクロール矢印"
+          className={styles.ScrollImg}
+        />
+      </div>
     </div>
   );
 };

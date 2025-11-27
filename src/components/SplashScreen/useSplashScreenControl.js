@@ -23,10 +23,6 @@ const useSplashScreenControl = () => {
       setSplashClass('slideUpByScroll');
     };
 
-    const handleClick = () => {
-      ClosingAnimation();
-    };
-
     const handleScroll = () => {
       // バウンスアニメーションはscrollYの値を変更しないため、誤発動を防止できる
       if (window.scrollY > 0) {
@@ -41,12 +37,10 @@ const useSplashScreenControl = () => {
     // };
 
     // イベントリスナーの登録
-    document.addEventListener('click', handleClick);
     window.addEventListener('scroll', handleScroll);
 
     // クリーンアップ関数: コンポーネントがアンマウントされる際にリスナーを削除
     return () => {
-      document.removeEventListener('click', handleClick);
       window.removeEventListener('scroll', handleScroll);
     };
   }, [showSplash]);
