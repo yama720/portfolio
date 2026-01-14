@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Profile.module.css';
-import profileImage from '@assets/image/profile.jpg';
+import profileImage from '@assets/image/profile.png';
 import buttonImage from '@assets/image/arrow.png';
 import ProfileModal from './ProfileModal';
 
@@ -31,9 +31,9 @@ export default function Profile() {
           </div>
 
           <div className={styles.profileInfoArea}>
-            <h3 className={styles.profileName}>山田真歩</h3>
+            <h3 className={styles.profileName}>名前</h3>
             <p className={styles.profileDescription}>
-              兵庫県在住　1998年生まれ <br />
+              〇〇県在住　〇〇年生まれ <br />
               大学卒業後、アルバイトで転々とし、
               <br />
               現在職業訓練校に在籍中。
@@ -57,7 +57,7 @@ export default function Profile() {
         <ProfileModal
           isOpen={isModalOpen}
           onClose={closeModal} // 閉じるための関数を渡す
-          content="スタジオツアーにて撮った写真。スリザリンの談話室は椅子がとても深かった。"
+          content="AIで作ったリスです。"
         />
       )}
     </>

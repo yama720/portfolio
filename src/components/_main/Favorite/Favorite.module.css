@@ -18,14 +18,20 @@
 }
 
 .favoriteListGrid {
-  display: grid;
-  /* 3列設定 */
-  grid-template-columns: repeat(2, 1fr);
-  /* アイテム間の間隔 */
-  gap: 50px;
+  /* display: grid; はそのままでも良いですが、1列にするために変更 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   max-width: 900px;
   margin: 0 auto;
+}
+
+.descriptionText {
+  text-align: center; /* テキスト自体を中央揃え */
+  line-height: 1.8; /* 行間を少し広げると読みやすくなります */
+  font-size: 1.1em;
+  width: 100%; /* 幅をいっぱいにする */
 }
 
 .constructionContainer {
